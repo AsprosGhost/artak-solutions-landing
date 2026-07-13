@@ -16,5 +16,8 @@
     "lucide-react": "latest"
   },
   "devDependencies": {},
-  "description": "Landing page React + Vite para Artak Solutions"
+  "description": "Landing page React + Vite para Artak Solutions",
+  "engines": {
+    "node": "22.x"
+  }
 }
