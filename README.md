@@ -1,47 +1,55 @@
-# Artak Solutions Landing Page V4
+# Artak Solutions Landing
 
-Landing page en React + Vite para presentar Artak Solutions como desarrolladora de aplicaciones móviles, plataformas web, integraciones, APIs, bases de datos, soluciones fintech y automatización de procesos.
+Landing page de prueba para Artak Solutions desarrollada con React + Vite.
 
-## Datos configurados
+## Requisitos recomendados
 
-- Logo textual: `artak` en rojo y `Solutions` en blanco.
-- Correo: `contacto@artak.com.mx`
-- Teléfono: `+52 55 4821 9034`
-- Tecnologías visibles: Java, Symfony, GitHub, AWS y SQL.
-- Clientes de referencia: Dish, Somos Uno, Nomibox y Variv Capital.
+- Node.js 20 LTS
+- npm 10.x
 
-## Cómo correr el proyecto
+El proyecto fija Node 20 en `package.json` para que Vercel no use una versión demasiado nueva de Node/npm.
+
+## Ejecutar localmente
 
 ```bash
-npm install
+npm install --no-audit --no-fund
 npm run dev
 ```
 
-Después abre la URL que entregue Vite, normalmente:
+Abrir:
 
 ```txt
 http://localhost:5173/
 ```
 
-## Build de producción
+## Probar build local
 
 ```bash
 npm run build
 ```
 
-La carpeta final se genera en:
+Debe terminar con `✓ built`.
 
-```txt
-dist/
+## Configuración de Vercel
+
+El proyecto incluye `vercel.json` con:
+
+```json
+{
+  "framework": "vite",
+  "installCommand": "npm install --no-audit --no-fund",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
+}
 ```
 
-## Siguiente paso recomendado
+En Vercel no se necesitan variables de entorno para esta landing.
 
-1. Revisar el sitio en computadora y celular.
-2. Ajustar cualquier texto que el jefe quiera cambiar.
-3. Subir el código a GitHub.
-4. Publicar en Vercel para obtener una URL temporal/pública.
+## Archivos que NO deben subirse
 
-## Nota
+- `node_modules/`
+- `dist/`
+- `.vercel/`
+- `.env`
 
-Los datos de contacto son de ejercicio y pueden cambiarse fácilmente en `src/App.jsx`.
+Ya están incluidos en `.gitignore`.
