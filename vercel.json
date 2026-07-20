@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "framework": "vite",
-  "installCommand": "npm install --no-audit --no-fund",
-  "buildCommand": "npm run build",
+  "installCommand": "echo skip install",
+  "buildCommand": "echo skip build",
   "outputDirectory": "dist"
 }

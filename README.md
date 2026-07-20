@@ -1,55 +1,37 @@
 # Artak Solutions Landing
 
-Landing page de prueba para Artak Solutions desarrollada con React + Vite.
+Landing page de práctica/propuesta para Artak Solutions.
 
-## Requisitos recomendados
+## Importante para Vercel
 
-- Node.js 20 LTS
-- npm 10.x
+Esta versión incluye la carpeta `dist/` ya construida y Vercel está configurado para desplegarla directamente.
 
-El proyecto fija Node 20 en `package.json` para que Vercel no use una versión demasiado nueva de Node/npm.
-
-## Ejecutar localmente
-
-```bash
-npm install --no-audit --no-fund
-npm run dev
-```
-
-Abrir:
+Esto evita el error de `npm install` en Vercel con Node 24:
 
 ```txt
-http://localhost:5173/
+npm error Exit handler never called!
 ```
 
-## Probar build local
+## Configuración usada por Vercel
 
-```bash
-npm run build
-```
-
-Debe terminar con `✓ built`.
-
-## Configuración de Vercel
-
-El proyecto incluye `vercel.json` con:
+Archivo `vercel.json`:
 
 ```json
 {
-  "framework": "vite",
-  "installCommand": "npm install --no-audit --no-fund",
-  "buildCommand": "npm run build",
+  "version": 2,
+  "installCommand": "echo skip install",
+  "buildCommand": "echo skip build",
   "outputDirectory": "dist"
 }
 ```
 
-En Vercel no se necesitan variables de entorno para esta landing.
+## Desarrollo local opcional
 
-## Archivos que NO deben subirse
+Cuando tengas un entorno Node/npm estable, puedes instalar dependencias y reconstruir:
 
-- `node_modules/`
-- `dist/`
-- `.vercel/`
-- `.env`
+```bash
+npm install
+npm run build
+```
 
-Ya están incluidos en `.gitignore`.
+Para este deploy actual no hace falta correr npm localmente.

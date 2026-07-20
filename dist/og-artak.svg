@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071020"/>
+      <stop offset="1" stop-color="#020713"/>
+    </linearGradient>
+    <radialGradient id="red" cx="20%" cy="20%" r="55%">
+      <stop offset="0" stop-color="#fb2f4c" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#fb2f4c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blue" cx="80%" cy="35%" r="60%">
+      <stop offset="0" stop-color="#5c7cff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#5c7cff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#red)"/>
+  <rect width="1200" height="630" fill="url(#blue)"/>
+  <text x="90" y="180" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="88" fill="#fb2f4c">artak</text>
+  <text x="330" y="180" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="88" fill="#ffffff">Solutions</text>
+  <text x="94" y="285" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="58" fill="#ffffff">Desarrollo mobile, web y fintech</text>
+  <text x="96" y="360" font-family="Inter, Arial, sans-serif" font-size="30" fill="#c2cada">Aplicaciones, integraciones, APIs, bases de datos y automatización</text>
+  <rect x="92" y="430" width="390" height="72" rx="36" fill="#fb2f4c"/>
+  <text x="130" y="478" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="28" fill="#ffffff">contacto@artak.com.mx</text>
+</svg>
