@@ -1,37 +1,17 @@
 # Artak Solutions Landing
 
-Landing page de práctica/propuesta para Artak Solutions.
+Versión preparada para Vercel como sitio estático preconstruido.
 
-## Importante para Vercel
+## Deploy
 
-Esta versión incluye la carpeta `dist/` ya construida y Vercel está configurado para desplegarla directamente.
+Vercel no ejecuta `npm install` ni `npm run build`; publica directamente la carpeta `dist`.
 
-Esto evita el error de `npm install` en Vercel con Node 24:
-
-```txt
-npm error Exit handler never called!
+```powershell
+git add .
+git commit -m "fix: publicar landing estatica preconstruida"
+git push origin main
 ```
 
-## Configuración usada por Vercel
+## Nota
 
-Archivo `vercel.json`:
-
-```json
-{
-  "version": 2,
-  "installCommand": "echo skip install",
-  "buildCommand": "echo skip build",
-  "outputDirectory": "dist"
-}
-```
-
-## Desarrollo local opcional
-
-Cuando tengas un entorno Node/npm estable, puedes instalar dependencias y reconstruir:
-
-```bash
-npm install
-npm run build
-```
-
-Para este deploy actual no hace falta correr npm localmente.
+La landing está renderizada como HTML estático para evitar el error de npm en Vercel. El menú móvil usa un pequeño script vanilla incluido en `dist/index.html`.
